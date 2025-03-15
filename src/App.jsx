@@ -1,16 +1,12 @@
-
-import './App.css'
-import { BookCall } from './views/bookCall'
+import { RouterProvider } from "react-router";
+import "./App.css";
+import { router } from "./router";
 
 function App() {
-
-  return (
-   <BookCall />
-  )
+  return <RouterProvider router={router} />;
 }
 
-export default App
-
+export default App;
 
 /**
  * {     mytheme: {

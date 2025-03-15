@@ -4,7 +4,7 @@ import { SiStarship } from "react-icons/si";
 
 export const title = "Ismail code";
 
-export const heroSectionTitle = "Based in Egypt I'm   Website Developer ";
+export const heroSectionTitle = "Web Development from the Future";
 export const aboutSectionTitle = "Explore the power of internet & more ";
 
 export const slides = [

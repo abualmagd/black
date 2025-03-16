@@ -86,24 +86,20 @@ export const miniTestMonialdata = [
     platform: "twitter",
   },
   {
-    name: "Abeer Ali",
+    name: "Abeer Ahmed",
     image:
       "https://user-images.trustpilot.com/66720004290ae621bb11f24c/73x73.png",
     content:
-      "Great for text to speech conversion with AI ,has many options ,effects and easy.you can depend on for voiceovers.",
-    url: "https://www.trustpilot.com/reviews/66720043f8f5b76c82d8c495",
+      "التواصل والتعاون المتميزان قدرات استثنائية على حل المشكلات كان منتبه ، وأخذ الوقت الكافي لفهم طلباتي",
     platform: "trustpilot",
+    url: " ",
   },
   {
     name: "Anon",
     image: "./src/assets/hl.png",
     content:
-      "the best part about using Speaksnaps," +
-      "Free to convert 10,000 charachters without paying any thing" +
-      " More voices needed and more languages" +
-      " but it is" +
-      "Good and easy use tool to convert text to speech, easily customize the output voice",
-    url: "https://www.crowdreviews.com/speaksnaps/reviews/good-easy-tool-125421",
+      "What I like best about Ismail is his commitment to understanding and meeting the unique needs of their clients. ",
+    url: "",
     platform: "crowdreviews",
   },
 ];

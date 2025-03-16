@@ -24,7 +24,7 @@ export function ProjectsPart() {
           <div className="flex text-center w-full justify-center">
             <a
               href="/projects"
-              className=" btn btn-outline btn-wide text-center mt-3 hover:scale-105 border-solid border-2 border-gray-200   "
+              className=" hidden btn btn-outline btn-wide text-center mt-3 hover:scale-105 border-solid border-2 border-gray-200   "
             >
               Show more projects
             </a>

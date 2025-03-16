@@ -69,10 +69,10 @@ export const myProjects = [
     image: "/assets/projj.jpg",
   },
   {
-    name: "Yellow",
-    description: "Restuarant website, with all ability. ",
-    link: "https://codefray.com",
-    image: "/assets/res.jpg",
+    name: "Koora News",
+    description: "News website, with all ability, get updated news from Api  ",
+    link: "https://koora-news-master-a2at6s.laravel.cloud/",
+    image: "/assets/news.jpg",
   },
 ];
 
@@ -82,7 +82,7 @@ export const miniTestMonialdata = [
     image: "/assets/hl.png",
     content:
       "What a brilliant developer! he build my desirable website in short time, would highly recommend!",
-    url: "https://x.com/tony_syrup",
+    url: "",
     platform: "twitter",
   },
   {
@@ -96,7 +96,7 @@ export const miniTestMonialdata = [
   },
   {
     name: "Anon",
-    image: "/assets/hl.png",
+    image: "/assets/labsr.png",
     content:
       "What I like best about Ismail is his commitment to understanding and meeting the unique needs of their clients. ",
     url: "",

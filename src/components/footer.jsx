@@ -17,7 +17,7 @@ export function Footer() {
           );
         })}
       </ul>
-      <div className="footer-tail mt-10 h-full flex md:flex-row flex-col w-full justify-between md:items-center">
+      <div className="footer-tail mt-10 h-full flex items-center md:flex-row flex-col w-full justify-between md:items-center">
         <FirstPart />
         <Links />
         <LastPart />
@@ -32,7 +32,7 @@ function FirstPart() {
   )}`;
   return (
     <div>
-      <p className="w-72 mr-6 text-sm text-neutral-400">
+      <p className="w-72 mr-6  text-sm text-neutral-400">
         Feel free to ask any quistion, happy to help.
       </p>
       <a

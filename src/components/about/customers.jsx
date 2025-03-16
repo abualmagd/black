@@ -27,7 +27,7 @@ export function AboutCustomers() {
       <div className="flex left-about-sec relative md:w-1/3 w-full mt-16">
         <div className="md:w-1/4 w-1/3"></div>
         <img
-          src="./src/assets/fast.png"
+          src="/assets/fast.png"
           alt="hello"
           className=" md:h-4/5 h-40  md:-mt-10 filter grayscale brightness-50"
         />

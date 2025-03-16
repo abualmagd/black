@@ -5,11 +5,7 @@ export function AboutMain() {
   return (
     <main className=" w-full flex flex-row flex-wrap mb-14">
       <div className="  right-section flex md:items-end justify-end image-section md:w-1/2 w-full mt-4 md:-mb-5">
-        <img
-          src="./src/assets/holu.png"
-          className="h-96"
-          alt="profile photo "
-        />
+        <img src="/assets/holu.png" className="h-96" alt="profile photo " />
       </div>
 
       <div className="left-section md:w-1/2 w-full   flex flex-col md:items-start items-center  justify-center">

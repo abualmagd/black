@@ -8,7 +8,7 @@ export function Technologies() {
       <div className="flex md:flex-row flex-col w-full md:h-72 justify-between   items-center">
         <div className="left-image-tech md:w-1/2 m-4 ">
           <img
-            src="./src/assets/skls.webp"
+            src="/assets/skls.webp"
             alt="skills technology"
             className=" h-60"
           />

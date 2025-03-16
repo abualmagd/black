@@ -59,27 +59,27 @@ export const myProjects = [
       "Speaksnaps is a versatile text-to-speech software that converts written content " +
       "into natural-sounding speech. Ideal for individuals with visual impairments",
     link: "https:/speaksnaps.com",
-    image: "src/assets/proj.jpg",
+    image: "/assets/proj.jpg",
   },
   {
     name: "Codefray",
     description:
       "Codefray is a code learning platform, to master web development ",
     link: "https:/codefray.com",
-    image: "src/assets/projj.jpg",
+    image: "/assets/projj.jpg",
   },
   {
     name: "Yellow",
     description: "Restuarant website, with all ability. ",
     link: "https:/codefray.com",
-    image: "src/assets/res.jpg",
+    image: "/assets/res.jpg",
   },
 ];
 
 export const miniTestMonialdata = [
   {
     name: "Tony Adward",
-    image: "./src/assets/hl.png",
+    image: "/assets/hl.png",
     content:
       "What a brilliant developer! he build my desirable website in short time, would highly recommend!",
     url: "https://x.com/tony_syrup",
@@ -96,7 +96,7 @@ export const miniTestMonialdata = [
   },
   {
     name: "Anon",
-    image: "./src/assets/hl.png",
+    image: "/assets/hl.png",
     content:
       "What I like best about Ismail is his commitment to understanding and meeting the unique needs of their clients. ",
     url: "",

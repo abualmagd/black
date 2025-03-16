@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
 import { Layout } from "../components/layout";
+import { myMail } from "../data/const";
 
 export function BookCall() {
   const [message, setMessage] = useState({
@@ -9,10 +10,20 @@ export function BookCall() {
     subject: "",
     content: "",
   });
-  const send = (e) => {
+  const [error, setError] = useState(null);
+
+  const send = async (e) => {
     e.preventDefault();
     if (message.email.length > 0) {
-      console.log(message);
+      try {
+        window.location.href = `mailto:${myMail}?subject=${encodeURIComponent(
+          message.subject
+        )}&body=${encodeURIComponent(
+          "Im " + message.name + " \n " + message.content
+        )}`;
+      } catch (error) {
+        setError(String(error));
+      }
     }
   };
 
@@ -34,9 +45,6 @@ export function BookCall() {
       default:
         break;
     }
-
-    console.log(target);
-    console.log(e.target.value);
   };
   return (
     <Layout>
@@ -82,6 +90,7 @@ export function BookCall() {
           className=" btn btn-sm btn-outline ml-auto bg-primary"
           value={"Send"}
         />
+        {error && <div className="error test-red-500 m-2">{error}</div>}
       </form>
       <div className=" h-36"></div>
     </Layout>

@@ -34,14 +34,16 @@ export function NewHomeMain() {
       <div className="hero  h-[70vh] w-full">
         <div className="hero-content  text-center">
           <div className="max-w-md">
-            <h1 className="md:text-5xl text-3xl font-extrabold text-white">
+            <h1 className="md:text-5xl text-3xl font-extrabold">
               {heroSectionTitle}
             </h1>
             <p className="py-6 w-full">
               Your web, your choice. Conventional designs or cutting-edge
               innovation? The future of the web awaits your decision.
             </p>
-            <button className="btn btn-primary ">Show my work</button>
+            <a href="#services" className="btn btn-primary ">
+              Dig into my services
+            </a>
           </div>
         </div>
       </div>

@@ -1,5 +1,7 @@
+/* eslint-disable react/prop-types */
+import { myProjects } from "../../data/const";
+
 export function ProjectsPart() {
-  const projects = [1, 2, 3, 4, 5];
   return (
     <section className="my-10" id="projects">
       <div>
@@ -8,13 +10,13 @@ export function ProjectsPart() {
             Discover our live projects
           </h2>
           <h3 className=" mt-4 text-center text-lg text-slate-500">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit.{" "}
+            Take a look at a small selection of my projects.{" "}
           </h3>
 
           <div className="  mt-8 grid md:grid-cols-3 gap-1 grid-cols-1  justify-center w-full  ">
-            {projects.map((p, i) => {
+            {myProjects.map((p, i) => {
               if (i < 3) {
-                return <ProjrectCard key={i} />;
+                return <ProjrectCard project={p} key={i} />;
               }
               return null;
             })}
@@ -33,24 +35,28 @@ export function ProjectsPart() {
   );
 }
 
-export function ProjrectCard() {
+// eslint-disable-next-line react/prop-types
+export function ProjrectCard({ project }) {
   return (
     <div className="card bg-base-100 image-full m-2 max-w-96 shadow-md">
       <figure>
-        <img src="src/assets/proj.jpg" alt="Web design" />
+        <img src={project.image} alt="Web design" />
       </figure>
       <div className="card-body ">
         <h2 className="card-title text-white px-4 py-2 rounded ">
-          Web design!
+          {project.name}
         </h2>
-        <p className=" line-clamp-2 text-white px-4 py-1 rounded">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Reprehenderit, aspernatur voluptate? Recusandae eveniet fugiat
-          inventore repudiandae, est modi vel molestiae, maxime aut sint
-          blanditiis soluta! Explicabo vero tempore ad adipisci?
+        <p className=" line-clamp-2 overflow-hidden text-white px-4 py-1 rounded">
+          {project.description}
         </p>
         <div className="card-actions justify-end">
-          <button className="btn btn-primary bg-slate-100">live preview</button>
+          <a
+            href={project.link}
+            target="_blank"
+            className="btn btn-primary bg-slate-100"
+          >
+            live preview
+          </a>
         </div>
       </div>
     </div>

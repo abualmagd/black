@@ -78,10 +78,10 @@ export const myProjects = [
 
 export const miniTestMonialdata = [
   {
-    name: "Tony Syrup",
+    name: "Tony Adward",
     image: "./src/assets/hl.png",
     content:
-      "What a brilliant app! I've been able turn my newsletter into audio snippets that I can use for my TikTok and Instagram reels. This is saving me SOOO much time. Ismail has created something great here, would highly recommend!",
+      "What a brilliant developer! he build my desirable website in short time, would highly recommend!",
     url: "https://x.com/tony_syrup",
     platform: "twitter",
   },

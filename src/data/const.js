@@ -58,20 +58,20 @@ export const myProjects = [
     description:
       "Speaksnaps is a versatile text-to-speech software that converts written content " +
       "into natural-sounding speech. Ideal for individuals with visual impairments",
-    link: "https:/speaksnaps.com",
+    link: "https://speaksnaps.com",
     image: "/assets/proj.jpg",
   },
   {
     name: "Codefray",
     description:
       "Codefray is a code learning platform, to master web development ",
-    link: "https:/codefray.com",
+    link: "https://codefray.com",
     image: "/assets/projj.jpg",
   },
   {
     name: "Yellow",
     description: "Restuarant website, with all ability. ",
-    link: "https:/codefray.com",
+    link: "https://codefray.com",
     image: "/assets/res.jpg",
   },
 ];

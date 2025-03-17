@@ -23,7 +23,7 @@ export const myMail = "ismailabualmagd@gmail.com";
 export const servsiceP =
   "From Vision to Reality: I Offer a Variety of Tailored Web Solutions!";
 
-export const myNumber = "00201508328238";
+export const myNumber = "201508328238";
 export const whatsMessage = "hi, ismail I want build my website";
 
 export const mySkills = [

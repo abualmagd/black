@@ -14,7 +14,7 @@ export function AnimatedSlider() {
           x: ["0%", "-100%"],
           transition: {
             ease: "linear",
-            duration: 8,
+            duration: 16,
             repeat: Infinity,
           },
         }}

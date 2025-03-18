@@ -6,9 +6,7 @@ export function NewHomeMain() {
   return (
     <div className="my-home-main flex flex-col">
       <div className="hero relative h-[70vh] w-full">
-        <div className="absolute w-screen overflow-x-hidden h-[700px] z-1 md:opacity-5 opacity-10">
-          <img src="/assets/bgg.jpg" alt="" className="w-screen h-[700px]" />
-        </div>
+        <div className="absolute w-screen overflow-x-hidden h-[700px] z-1 md:opacity-5 opacity-10 hero-bg"></div>
         <div className="swim-animation ">
           <video src="/assets/rkt.webm" autoPlay muted className="h-32 w-32" />
         </div>

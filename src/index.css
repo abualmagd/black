@@ -46,3 +46,8 @@
     display: none;
   }
 }
+
+.hero-bg {
+  background-image: url("/assets/bgg.jpg");
+  background-size: cover;
+}

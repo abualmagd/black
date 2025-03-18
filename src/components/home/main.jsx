@@ -1,38 +1,19 @@
 import { heroSectionTitle } from "../../data/const";
-import { PrimaryActionButton } from "../utils";
+
 import { AnimatedSlider } from "./animtedSlider";
-
-export function HomeMain() {
-  return (
-    <main className=" w-full flex flex-row-reverse flex-wrap">
-      <div className="right-section image-section md:w-1/2 w-full mt-4 md:-mb-5">
-        <img src="./src/assets/labsr.png" alt="profile photo " />
-      </div>
-
-      <div className="left-section md:w-1/2 w-full   flex flex-col md:items-end items-center  justify-center">
-        <div className="hero-content flex flex-col md:text-start text-center w-80">
-          <h2 className="text-3xl font-bold ">{heroSectionTitle}</h2>
-          <p className=" line-clamp-3 text-sm mt-1">
-            Lorem ipsum, dolor sit 59959elit. Eos quia, aliquam corrupti atque
-            vitae similique recusandae repellendus officiis quaerat in iste
-            alias aperiam ea ullam eligendi debitis! Ratione, vel illo.
-          </p>
-        </div>
-
-        <div className="ml-4 mt-2">
-          <PrimaryActionButton word={"view my work"} link={"/"} />
-        </div>
-      </div>
-      <AnimatedSlider />
-    </main>
-  );
-}
 
 export function NewHomeMain() {
   return (
-    <div className="flex flex-col">
-      <div className="hero  h-[70vh] w-full">
-        <div className="hero-content  text-center">
+    <div className="my-home-main flex flex-col">
+      <div className="hero relative h-[70vh] w-full">
+        <div className="absolute w-screen overflow-x-hidden h-[700px] z-1 md:opacity-5 opacity-10">
+          <img src="/assets/bgg.jpg" alt="" className="w-screen h-[700px]" />
+        </div>
+        <div className="swim-animation ">
+          <video src="/assets/rkt.webm" autoPlay muted className="h-32 w-32" />
+        </div>
+
+        <div className="hero-content  z-10  text-center">
           <div className="max-w-md">
             <h1 className="md:text-5xl text-3xl font-extrabold">
               {heroSectionTitle}

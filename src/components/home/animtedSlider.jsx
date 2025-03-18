@@ -7,7 +7,7 @@ export function AnimatedSlider() {
   const times = window.screen.width > "800" ? slides.length : 2;
 
   return (
-    <div className="animated-slider-wrapper overflow-hidden h-16 w-screen bg-base-300  md:-mx-20 flex flex-col items-start justify-center">
+    <div className="animated-slider-wrapper overflow-hidden h-16 w-screen bg-base-300  z-10 md:-mx-20 flex flex-col items-start justify-center">
       <motion.div
         className="flex w-screen"
         animate={{

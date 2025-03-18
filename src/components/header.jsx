@@ -4,7 +4,7 @@ import { ActionButton } from "./utils";
 
 export function MyHeader() {
   return (
-    <header className="navbar mr-0">
+    <header className="navbar mr-0 z-10">
       <div className="nav-start flex-0">
         <div className="dropdown">
           <div

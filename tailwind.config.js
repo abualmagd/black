@@ -2,6 +2,9 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
+    screens: {
+      md: "830px",
+    },
     extend: {},
   },
   plugins: [
@@ -20,9 +23,6 @@ export default {
           "base-content": "#FFFFFF",
         },
       },
-
-      "light",
-      "dark",
     ],
   },
 };

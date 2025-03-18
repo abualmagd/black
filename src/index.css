@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -14,4 +12,37 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.swim-animation {
+  position: absolute; /* Important for positioning */
+  animation: swimOnce 4s linear forwards, swimInPlace 2s linear forwards 4s;
+}
 
+@keyframes swimOnce {
+  0% {
+    transform: translate(-13rem, 50%) rotate(0deg); /* Start position */
+  }
+  25% {
+    transform: translate(50px, 20px) rotate(5deg);
+  }
+  50% {
+    transform: translate(100px, 0) rotate(0deg);
+  }
+  75% {
+    transform: translate(50px, -20px) rotate(-5deg);
+  }
+  100% {
+    transform: translate(100px, 0) rotate(0deg); /* stays at the 50% position */
+  }
+}
+@keyframes swimInPlace {
+  0% {
+    transform: translate(100px, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(15px, 5px) rotate(2deg); /* Slight movement */
+  }
+  100% {
+    transform: translate(300px, -300%) rotate(0deg);
+    display: none;
+  }
+}

@@ -1,12 +1,3 @@
-import { BiSolidBookmarkStar } from "react-icons/bi";
-import {
-  FaStar,
-  FaHourglassStart,
-  FaMobileAlt,
-  FaSearch,
-  FaRocket,
-} from "react-icons/fa";
-
 export const title = "Ismail code";
 
 export const heroSectionTitle = "Web Development from the Future";
@@ -42,15 +33,6 @@ export const mySkills = [
 export const whatsappLnk = `https://wa.me/${myNumber}?text=${encodeURIComponent(
   whatsMessage
 )}`;
-
-export const slides = [
-  { description: "High performance", icon: FaStar },
-  { description: "Responsive Design", icon: FaMobileAlt },
-  { description: "Fast development", icon: FaHourglassStart },
-  { description: "SEO Optimization", icon: FaSearch },
-  { description: "Newest Technology", icon: BiSolidBookmarkStar },
-  { description: "Fast Loading Speed ", icon: FaRocket },
-];
 
 export const myProjects = [
   {

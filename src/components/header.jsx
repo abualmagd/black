@@ -1,8 +1,19 @@
 import { NavLink } from "react-router";
 import { title } from "../data/const";
 import { ActionButton } from "./utils";
+import { useTranslation } from "react-i18next";
 
 export function MyHeader() {
+  const { i18n } = useTranslation();
+
+  const changeLanguage = () => {
+    if (i18n.language == "en") {
+      i18n.changeLanguage("ar");
+    } else {
+      i18n.changeLanguage("en");
+    }
+  };
+
   return (
     <header className="navbar mr-0 z-10">
       <div className="nav-start flex-0">
@@ -64,6 +75,12 @@ export function MyHeader() {
         </ul>
       </div>
       <div className="navbar-end">
+        <div
+          className=" cursor-pointer h-7 w-6 rounded mr-1 border-2 border-base-content/20 text-center"
+          onClick={changeLanguage}
+        >
+          {i18n.language == "en" ? "عر" : "en"}
+        </div>
         <ActionButton word={"book a call"} link={"/connect"} />
       </div>
     </header>

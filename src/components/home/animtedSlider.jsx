@@ -1,8 +1,26 @@
-import { slides } from "../../data/const";
-
+import { BiSolidBookmarkStar } from "react-icons/bi";
+import {
+  FaStar,
+  FaHourglassStart,
+  FaMobileAlt,
+  FaSearch,
+  FaRocket,
+} from "react-icons/fa";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 export function AnimatedSlider() {
+  const { t } = useTranslation();
+
+  const slides = [
+    { description: t("highPerformance"), icon: FaStar },
+    { description: t("responsiveDesign"), icon: FaMobileAlt },
+    { description: t("fastDevelopment"), icon: FaHourglassStart },
+    { description: t("optimization"), icon: FaSearch },
+    { description: t("newestTechnology"), icon: BiSolidBookmarkStar },
+    { description: t("fastLoading"), icon: FaRocket },
+  ];
+
   const duplictedSlides = [...slides, ...slides];
   const times = window.screen.width > "800" ? slides.length : 2;
 

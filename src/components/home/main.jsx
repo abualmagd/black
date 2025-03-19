@@ -1,8 +1,8 @@
-import { heroSectionTitle } from "../../data/const";
-
 import { AnimatedSlider } from "./animtedSlider";
+import { useTranslation } from "react-i18next";
 
 export function NewHomeMain() {
+  const { t } = useTranslation();
   return (
     <div className="my-home-main flex flex-col">
       <div className="hero relative h-[70vh] w-full">
@@ -14,14 +14,12 @@ export function NewHomeMain() {
         <div className="hero-content  z-10  text-center">
           <div className="max-w-md">
             <h1 className="md:text-5xl text-3xl font-extrabold">
-              {heroSectionTitle}
+              {t("heroSectionTitle")}
             </h1>
-            <p className="py-6 w-full">
-              Your web, your choice. Conventional designs or cutting-edge
-              innovation? The future of the web awaits your decision.
-            </p>
+
+            <p className="py-6 w-full">{t("heroP")}</p>
             <a href="#services" className="btn btn-primary ">
-              Dig into my services
+              {t("dig")}{" "}
             </a>
           </div>
         </div>

@@ -19,7 +19,7 @@
 
 @keyframes swimOnce {
   0% {
-    transform: translate(-13rem, 50%) rotate(0deg); /* Start position */
+    transform: translate(-13rem, 50%) rotate(0deg);
   }
   25% {
     transform: translate(50px, 20px) rotate(5deg);
@@ -31,7 +31,7 @@
     transform: translate(50px, -20px) rotate(-5deg);
   }
   100% {
-    transform: translate(100px, 0) rotate(0deg); /* stays at the 50% position */
+    transform: translate(100px, 0) rotate(0deg);
   }
 }
 @keyframes swimInPlace {
@@ -39,7 +39,7 @@
     transform: translate(100px, 0) rotate(0deg);
   }
   50% {
-    transform: translate(15px, 5px) rotate(2deg); /* Slight movement */
+    transform: translate(15px, 5px) rotate(2deg);
   }
   100% {
     transform: translate(300px, -300%) rotate(0deg);

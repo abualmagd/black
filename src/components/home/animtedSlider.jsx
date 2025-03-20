@@ -25,7 +25,10 @@ export function AnimatedSlider() {
   const times = window.screen.width > "800" ? slides.length : 2;
 
   return (
-    <div className="animated-slider-wrapper overflow-hidden h-16 w-screen bg-base-300  z-10 md:-mx-20 flex flex-col items-start justify-center">
+    <div
+      dir="ltr"
+      className="animated-slider-wrapper overflow-hidden h-16 w-screen bg-base-300  z-10 md:-mx-20 flex flex-col items-start justify-center"
+    >
       <motion.div
         className="flex w-screen"
         animate={{
@@ -45,7 +48,12 @@ export function AnimatedSlider() {
               className="flex-shrink-0 "
               style={{ width: `${100 / times}%` }}
             >
-              <div className="slide flex  overflow-hidden   items-center justify-center h-full">
+              <div
+                className="slide flex  overflow-hidden   items-center justify-center h-full"
+                style={{
+                  flexDirection: t("dir") === "rtl" ? "row-reverse" : "row",
+                }}
+              >
                 {<s.icon className="mx-2 text-primary" />}
 
                 {s.description}

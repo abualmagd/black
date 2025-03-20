@@ -1,31 +1,35 @@
+import { useTranslation } from "react-i18next";
 import { whatsappLnk } from "../../../data/const";
 
 export function RightSection() {
+  const { t } = useTranslation();
   return (
     <div className="flex flex-col h-96 justify-evenly ">
       <ServiceCard
-        title={"Portifolio Building"}
-        details={"Build attractive portfolio for you or your company"}
-        icon={"go"}
+        title={t("Portifolio Building")}
+        details={t("Build attractive portfolio for you or your company")}
+        icon={t("go")}
       />
       <ServiceCard
-        title={"Blog Development"}
-        details={"build attractive portfolio for you or your company"}
-        icon={"go"}
+        title={t("Blog Development")}
+        details={t(
+          "Create a high-speed blog optimized for SEO to achieve strong rankings in search engines."
+        )}
+        icon={t("go")}
       />
       <ServiceCard
-        title={"Education Platforms"}
-        details={
+        title={t("Education Platforms")}
+        details={t(
           "Develop interactive educational platforms that enhance learning."
-        }
-        icon={"go"}
+        )}
+        icon={t("go")}
       />
       <ServiceCard
-        title={"News Application"}
-        details={
+        title={t("News Application")}
+        details={t(
           "Create dynamic news applications that deliver the latest updates and engage your readers."
-        }
-        icon={"go"}
+        )}
+        icon={t("go")}
       />
     </div>
   );

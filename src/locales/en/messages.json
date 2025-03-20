@@ -21,5 +21,10 @@
   "body": "Write your query here",
   "aboutMe": "about me --------",
   "query": "  Any type of query \n and discussion",
-  "connect": "connect with us"
+  "connect": "connect with us",
+  "services": "services",
+  "customers": "customers",
+  "completion": "completion",
+  "reviews": "reviews",
+  "Have a project": "Have a project \n or idea"
 }

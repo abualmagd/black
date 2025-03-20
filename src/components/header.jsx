@@ -2,17 +2,42 @@ import { NavLink } from "react-router";
 import { title } from "../data/const";
 import { ActionButton } from "./utils";
 import { useTranslation } from "react-i18next";
+import { useEffect, useRef, useState } from "react";
+import { motion } from "framer-motion";
 
 export function MyHeader() {
   const { i18n } = useTranslation();
+  const [isOpen, setOpen] = useState(false);
 
-  const changeLanguage = () => {
-    if (i18n.language == "en") {
-      i18n.changeLanguage("ar");
-    } else {
-      i18n.changeLanguage("en");
-    }
+  const { t } = useTranslation();
+  const dropRef = useRef();
+
+  const variants = {
+    open: { opacity: 1, x: 0 },
+    closed: { opacity: 0, x: "-100%" },
   };
+
+  const changeMyLanguage = (e, lang) => {
+    e.stopPropagation();
+    console.log("ghhhh");
+    i18n.changeLanguage(lang);
+    setOpen(false);
+  };
+
+  useEffect(() => {
+    function closeDrop(event) {
+      console.log(event.target.id);
+      if (dropRef.current && event.target.id !== "k") {
+        setOpen(false);
+      }
+    }
+
+    document.addEventListener("mousedown", closeDrop);
+
+    return () => {
+      document.removeEventListener("mousedown", closeDrop);
+    };
+  }, [dropRef]);
 
   return (
     <header className="navbar mr-0 z-10">
@@ -42,15 +67,18 @@ export function MyHeader() {
               </g>
             </svg>
           </div>
-          <ul className="menu menu-sm dropdown-content bg-neutral rounded-box z-[1] mt-3 p-2 w-52 shadow">
+          <ul
+            ref={dropRef}
+            className="menu menu-sm dropdown-content capitalize  bg-neutral rounded-box z-[1] mt-3 p-2 w-52 shadow"
+          >
             <li>
-              <NavLink to="/">home</NavLink>
+              <NavLink to="/">{t("home")}</NavLink>
             </li>
             <li>
-              <NavLink to="/about">about</NavLink>
+              <NavLink to="/about">{t("about")}</NavLink>
             </li>
             <li>
-              <a href="#projects">projects</a>
+              <a href="#projects">{t("projects")}</a>
             </li>
           </ul>
         </div>
@@ -62,25 +90,58 @@ export function MyHeader() {
       <div className="flex-1"></div>
       <div className="navbar-end hidden md:flex"></div>
       <div className="navbar-center hidden md:flex">
-        <ul className="menu menu-horizontal px-1 gap-2">
+        <ul className="menu menu-horizontal px-1 gap-2 capitalize">
           <li>
-            <NavLink to="/">home</NavLink>
+            <NavLink to="/">{t("home")}</NavLink>
           </li>
           <li>
-            <NavLink to="/about">about</NavLink>
+            <NavLink to="/about">{t("about")}</NavLink>
           </li>
           <li>
-            <a href="/#projects">projects</a>
+            <a href="/#projects">{t("projects")}</a>
           </li>
         </ul>
       </div>
       <div className="navbar-end">
-        <div
-          className=" cursor-pointer h-7 w-6 rounded mr-1 border-2 border-base-content/20 text-center"
-          onClick={changeLanguage}
-        >
-          {i18n.language == "en" ? "عر" : "en"}
+        <div className=" flex flex-col relative">
+          <div
+            onClick={() => setOpen(!isOpen)}
+            className=" cursor-pointer h-7 w-6 rounded mx-1 border-2 border-base-content/20 text-center"
+          >
+            {i18n.language == "en" ? "en" : "عر"}
+          </div>
+          <motion.ul
+            variants={variants}
+            animate={isOpen ? "open" : "closed"}
+            className="absolute top-10 left-0 py-2 px-5 rounded bg-neutral"
+          >
+            <li className="cursor-pointer">
+              <button
+                id="k"
+                disabled={i18n.language == "en"}
+                style={{
+                  color: i18n.language == "ar" ? "#FFB822" : "GrayText",
+                }}
+                onClick={(e) => changeMyLanguage(e, "en")}
+              >
+                English
+              </button>
+            </li>
+            <li className=" cursor-pointer">
+              <button
+                id="k"
+                disabled={i18n.language == "ar"}
+                style={{
+                  color: i18n.language == "en" ? "#FFB822" : "GrayText",
+                }}
+                onClick={(e) => changeMyLanguage(e, "ar")}
+              >
+                عربي
+              </button>{" "}
+            </li>
+          </motion.ul>
         </div>
+
         <ActionButton word={"book a call"} link={"/connect"} />
       </div>
     </header>

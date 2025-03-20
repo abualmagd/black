@@ -142,7 +142,7 @@ export function MyHeader() {
           </motion.ul>
         </div>
 
-        <ActionButton word={"book a call"} link={"/connect"} />
+        <ActionButton word={t("book a call")} link={"/connect"} />
       </div>
     </header>
   );

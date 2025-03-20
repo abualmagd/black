@@ -1,15 +1,19 @@
 /* eslint-disable react/prop-types */
 
+import { useTranslation } from "react-i18next";
+
 export function Testimonial({ data, readMore }) {
+  const { t } = useTranslation();
   return (
     <section className="bg-base-100 mb-10 mt-8">
       <div className="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
         <h2 className="text-center text-xl font-bold tracking-tight ">
-          Read trusted reviews from our customers
+          {t("Read trusted reviews from our customers")}
         </h2>
         <h3 className=" mt-4 text-center text-lg text-slate-500">
-          Donnot just take our word for it - hear from the people who have
-          experienced Our services.
+          {t(
+            "Donnot just take our word for it - hear from the people who have experienced Our services."
+          )}
         </h3>
 
         <div className="  mt-8 grid md:grid-cols-3 gap-1 grid-cols-1  justify-center w-full  ">

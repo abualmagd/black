@@ -1,7 +1,7 @@
 export const title = "Ismail code";
 
 export const heroSectionTitle = "Web Development from the Future";
-export const aboutSectionTitle = "Explore the power of internet & more ";
+export const aboutSectionTitle = "Explore the power of internet & more";
 
 export const aboutMeP1 =
   "I`m full-stack developer who has found his passion in coding, ";
@@ -21,7 +21,7 @@ export const mySkills = [
   "Next",
   "React",
   "Tailwind",
-  "Nodejs",
+  "Expressjs",
   "scratch",
   "Laravel",
   "Postegres",
@@ -36,23 +36,22 @@ export const whatsappLnk = `https://wa.me/${myNumber}?text=${encodeURIComponent(
 
 export const myProjects = [
   {
-    name: "speaksnaps",
+    name: "Speaksnaps",
     description:
-      "Speaksnaps is a versatile text-to-speech software that converts written content " +
-      "into natural-sounding speech. Ideal for individuals with visual impairments",
+      "Speaksnaps is a versatile text-to-speech software that converts written content into natural-sounding speech. Ideal for individuals with visual impairments",
     link: "https://speaksnaps.com",
     image: "/assets/proj.jpg",
   },
   {
     name: "Codefray",
     description:
-      "Codefray is a code learning platform, to master web development ",
+      "Codefray is a code learning platform, to master web development",
     link: "https://codefray.com",
     image: "/assets/projj.jpg",
   },
   {
     name: "Koora News",
-    description: "News website, with all ability, get updated news from Api  ",
+    description: "News website, with all ability, get updated news from Api",
     link: "https://koora-news-master-a2at6s.laravel.cloud/",
     image: "/assets/news.jpg",
   },

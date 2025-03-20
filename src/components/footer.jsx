@@ -13,8 +13,8 @@ export function Footer() {
       <ul className="flex flex-wrap justify-center mx-auto">
         {mySkills.map((c, i) => {
           return (
-            <li className="mx-2" key={i}>
-              {c}
+            <li className="mx-2 text-base-content/40" key={i}>
+              {t(String(c))}
             </li>
           );
         })}

@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router";
 import Home from "./views/home";
 import About from "./views/about";
 import { BookCall } from "./views/bookCall";
+import Projects from "./views/projects";
 
 export let router = createBrowserRouter([
   {
@@ -16,5 +17,9 @@ export let router = createBrowserRouter([
   {
     path: "/connect",
     element: <BookCall />,
+  },
+  {
+    path: "/projects",
+    element: <Projects />,
   },
 ]);

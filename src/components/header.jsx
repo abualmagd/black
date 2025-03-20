@@ -4,11 +4,13 @@ import { ActionButton } from "./utils";
 import { useTranslation } from "react-i18next";
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
+import { useLocation } from "react-router";
 
 export function MyHeader() {
   const { i18n } = useTranslation();
   const [isOpen, setOpen] = useState(false);
-
+  const projectsLink =
+    useLocation().pathname === "/" ? "#projects" : "projects";
   const { t } = useTranslation();
   const dropRef = useRef();
 
@@ -78,7 +80,7 @@ export function MyHeader() {
               <NavLink to="/about">{t("about")}</NavLink>
             </li>
             <li>
-              <a href="#projects">{t("projects")}</a>
+              <a href={projectsLink}>{t("projects")}</a>
             </li>
           </ul>
         </div>
@@ -98,7 +100,7 @@ export function MyHeader() {
             <NavLink to="/about">{t("about")}</NavLink>
           </li>
           <li>
-            <a href="/#projects">{t("projects")}</a>
+            <a href={projectsLink}>{t("projects")}</a>
           </li>
         </ul>
       </div>

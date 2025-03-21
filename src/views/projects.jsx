@@ -14,7 +14,10 @@ export default function Projects() {
 
 export function ProjectList() {
   return (
-    <ul id="my-projectList" className=" flex flex-col gap-20 w-full  my-20 ">
+    <ul
+      id="my-projectList"
+      className=" flex flex-col gap-20 w-full overflow-x-hidden  my-20 "
+    >
       {myProjects.map((p, i) => {
         return (
           <li key={i} className="md:w-5/6 w-[90vw]">
@@ -41,7 +44,7 @@ export function ProjectBigCard({ project }) {
       <div className="content flex flex-col justify-end items-start absolute top-0 left-0 w-full h-full z-10 bg-black bg-opacity-60 ">
         <div className="data mb-20 md:mx-20 mx-2 flex flex-col gap-6 w-1/2 md:px-10 ">
           <h1 className=" text-4xl font-extrabold">{t(project.name)}</h1>
-          <p className=" text-lg">{t(project.description)}</p>
+          <p className=" text-lg line-clamp-3">{t(project.description)}</p>
           <div className="card-actions justify-end">
             <a
               href={project.link}

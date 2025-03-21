@@ -41,6 +41,10 @@ export const myProjects = [
       "Speaksnaps is a versatile text-to-speech software that converts written content into natural-sounding speech. Ideal for individuals with visual impairments",
     link: "https://speaksnaps.com",
     image: "/assets/proj.jpg",
+    details: {
+      tech: ["Next", "Tailwind", "Supabase", "Ai Api"],
+      hosting: "Netlify",
+    },
   },
   {
     name: "Codefray",
@@ -48,12 +52,20 @@ export const myProjects = [
       "Codefray is a code learning platform, to master web development",
     link: "https://codefray.com",
     image: "/assets/projj.jpg",
+    details: {
+      tech: ["Next", "Tailwind", "Supabase", "Cms"],
+      hosting: "Vercel",
+    },
   },
   {
     name: "Koora News",
     description: "News website, with all ability, get updated news from Api",
-    link: "https://koora-news-master-a2at6s.laravel.cloud/",
+    link: "https://github.com/abualmagd/koora-news",
     image: "/assets/news.jpg",
+    details: {
+      tech: ["Next", "Tailwind", "Laravel", "blade", "NewsData API"],
+      hosting: "Laravel cloud",
+    },
   },
 ];
 

@@ -63,7 +63,7 @@
   "Get The Fast website ever": "احصل على أسرع موقع ويب على الإطلاق.",
   "With best seo.": "بأفضل تحسين محركات البحث.",
   "Skills and Technologies I offer": "المهارات والتقنيات التي أجيدها.",
-  "Next": "نكست جي هس",
+  "Next": "نكست جي أس",
   "React": "رياكت",
   "Tailwind": "تيلويند",
   "Expressjs": "إكسبريس جي إس",
@@ -72,5 +72,14 @@
   "Postegres": "بوستجري إس كيو إل",
   "Cms": "نظم إدارة المحتوى",
   "Supabase": "سوبابيس",
-  "Firebase": "فايربيس"
+  "Firebase": "فايربيس",
+  "Show more projects": "أطلع على المزيد",
+  "blade": "بلاد انجن",
+  "NewsData API": "نيوز داتا Api",
+  "Technology": "تكنولوجي",
+  "Hosting": "الاستضافة",
+  "Laravel cloud": "لارفل كلود",
+  "Netlify": "نيتلفاى",
+  "Vercel": "فرسل",
+  "Ai Api": "ذكاء اصطناعي Api"
 }

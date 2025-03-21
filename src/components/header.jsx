@@ -21,14 +21,12 @@ export function MyHeader() {
 
   const changeMyLanguage = (e, lang) => {
     e.stopPropagation();
-    console.log("ghhhh");
     i18n.changeLanguage(lang);
     setOpen(false);
   };
 
   useEffect(() => {
     function closeDrop(event) {
-      console.log(event.target.id);
       if (dropRef.current && event.target.id !== "k") {
         setOpen(false);
       }
@@ -112,36 +110,38 @@ export function MyHeader() {
           >
             {i18n.language == "en" ? "en" : "عر"}
           </div>
-          <motion.ul
-            variants={variants}
-            animate={isOpen ? "open" : "closed"}
-            className="absolute top-10 left-0 py-2 px-5 rounded bg-neutral"
-          >
-            <li className="cursor-pointer">
-              <button
-                id="k"
-                disabled={i18n.language == "en"}
-                style={{
-                  color: i18n.language == "ar" ? "#FFB822" : "GrayText",
-                }}
-                onClick={(e) => changeMyLanguage(e, "en")}
-              >
-                English
-              </button>
-            </li>
-            <li className=" cursor-pointer">
-              <button
-                id="k"
-                disabled={i18n.language == "ar"}
-                style={{
-                  color: i18n.language == "en" ? "#FFB822" : "GrayText",
-                }}
-                onClick={(e) => changeMyLanguage(e, "ar")}
-              >
-                عربي
-              </button>{" "}
-            </li>
-          </motion.ul>
+          {isOpen && (
+            <motion.ul
+              variants={variants}
+              animate={isOpen ? "open" : "closed"}
+              className="absolute top-10 left-0 py-2 px-5 rounded bg-neutral"
+            >
+              <li className="cursor-pointer">
+                <button
+                  id="k"
+                  disabled={i18n.language == "en"}
+                  style={{
+                    color: i18n.language == "ar" ? "#FFB822" : "GrayText",
+                  }}
+                  onClick={(e) => changeMyLanguage(e, "en")}
+                >
+                  English
+                </button>
+              </li>
+              <li className=" cursor-pointer">
+                <button
+                  id="k"
+                  disabled={i18n.language == "ar"}
+                  style={{
+                    color: i18n.language == "en" ? "#FFB822" : "GrayText",
+                  }}
+                  onClick={(e) => changeMyLanguage(e, "ar")}
+                >
+                  عربي
+                </button>{" "}
+              </li>
+            </motion.ul>
+          )}
         </div>
 
         <ActionButton word={t("book a call")} link={"/connect"} />

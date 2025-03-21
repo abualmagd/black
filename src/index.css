@@ -51,3 +51,21 @@
   background-image: url("/assets/bgg.jpg");
   background-size: cover;
 }
+
+#my-projectList li:nth-child(odd) {
+  margin-inline: auto auto;
+}
+
+#my-projectList li:nth-child(even) {
+  margin-inline: 0 auto;
+}
+
+@media (max-width: 800px) {
+  #my-projectList li:nth-child(odd) {
+    margin-inline: auto auto;
+  }
+
+  #my-projectList li:nth-child(even) {
+    margin-inline: auto auto;
+  }
+}

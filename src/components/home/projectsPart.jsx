@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 export function ProjectsPart() {
   const { t } = useTranslation();
   return (
-    <section className="my-10" id="projects">
+    <section className="my-10 overflow-x-hidden" id="projects">
       <div>
         <div className="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
           <h2 className="text-center text-xl font-bold tracking-tight capitalize ">

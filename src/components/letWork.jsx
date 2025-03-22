@@ -10,7 +10,7 @@ export function LetWork() {
   const { t } = useTranslation();
 
   return (
-    <div className=" flex md:flex-row gap-3 bg-base-300 items-center p-4 rounded-md flex-col w-full md:h-32 mb-10 md:mb-0 pl-3 ">
+    <div className=" flex md:flex-row gap-3 overflow-x-hidden bg-base-300 items-center p-4 rounded-md flex-col w-full md:h-32 mb-10 md:mb-0 pl-3 ">
       <div className=" flex-1 text-3xl text-center md:text-start font-bold">
         {t("Have a project")}
       </div>

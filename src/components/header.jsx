@@ -41,49 +41,7 @@ export function MyHeader() {
 
   return (
     <header className="navbar mr-0 z-10">
-      <div className="nav-start flex-0">
-        <div className="dropdown">
-          <div
-            tabIndex={0}
-            role="button"
-            className="btn btn-ghost mx-0 md:hidden"
-          >
-            <svg
-              fill="#ffffff"
-              width="256px"
-              height="256px"
-              viewBox="0 0 32.00 32.00"
-              version="1.1"
-              xmlns="http://www.w3.org/2000/svg"
-              stroke="#ffffff"
-              className=" h-8 w-8 "
-            >
-              <g id="SVGRepo_bgCarrier"></g>
-              <g id="SVGRepo_tracerCarrier"></g>
-              <g id="SVGRepo_iconCarrier">
-                {" "}
-                <title>menu</title>{" "}
-                <path d="M8 24h16v-4h-16v4zM8 18.016h16v-4h-16v4zM8 12h16v-4h-16v4z"></path>{" "}
-              </g>
-            </svg>
-          </div>
-          <ul
-            ref={dropRef}
-            className="menu menu-sm dropdown-content capitalize  bg-neutral rounded-box z-[1] mt-3 p-2 w-52 shadow"
-          >
-            <li>
-              <NavLink to="/">{t("home")}</NavLink>
-            </li>
-            <li>
-              <NavLink to="/about">{t("about")}</NavLink>
-            </li>
-            <li>
-              <a href={projectsLink}>{t("projects")}</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <NavLink to={"/"} className="md:flex btn hidden btn-ghost text-xl">
+      <NavLink to={"/"} className="flex btn  btn-ghost text-xl">
         <img src="/logo-white.svg" className="h-10 w-10" alt="" />
         {title}
       </NavLink>
@@ -143,8 +101,50 @@ export function MyHeader() {
             </motion.ul>
           )}
         </div>
+        <div className="hidden md:flex">
+          <ActionButton word={t("book a call")} link={"/connect"} />
+        </div>
 
-        <ActionButton word={t("book a call")} link={"/connect"} />
+        <div className="dropdown dropdown-end">
+          <div
+            tabIndex={0}
+            role="button"
+            className="btn btn-ghost mx-0 md:hidden"
+          >
+            <svg
+              fill="#ffffff"
+              width="256px"
+              height="256px"
+              viewBox="0 0 32.00 32.00"
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+              stroke="#ffffff"
+              className=" h-8 w-8 "
+            >
+              <g id="SVGRepo_bgCarrier"></g>
+              <g id="SVGRepo_tracerCarrier"></g>
+              <g id="SVGRepo_iconCarrier">
+                {" "}
+                <title>menu</title>{" "}
+                <path d="M8 24h16v-4h-16v4zM8 18.016h16v-4h-16v4zM8 12h16v-4h-16v4z"></path>{" "}
+              </g>
+            </svg>
+          </div>
+          <ul
+            ref={dropRef}
+            className="menu menu-lg z-50 justify-center items-center dropdown-content capitalize  bg-neutral rounded-box  mt-3 p-2 w-52 shadow"
+          >
+            <li>
+              <NavLink to="/">{t("home")}</NavLink>
+            </li>
+            <li>
+              <NavLink to="/about">{t("about")}</NavLink>
+            </li>
+            <li>
+              <a href={projectsLink}>{t("projects")}</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
   );

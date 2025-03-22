@@ -16,7 +16,7 @@ export function ProjectList() {
   return (
     <ul
       id="my-projectList"
-      className=" flex flex-col gap-20 w-full overflow-x-hidden  my-20 "
+      className=" flex flex-col gap-20 w-full overflow-x-hidden  my-20 z-0 "
     >
       {myProjects.map((p, i) => {
         return (
@@ -63,8 +63,8 @@ export function ProjectBigCard({ project }) {
 
 export function DetailsLayer({ details }) {
   const variant = {
-    offscreen: { width: "0" },
-    onscreen: { width: "40%" },
+    offscreen: { width: "0", opacity: "0" },
+    onscreen: { width: "40%", opacity: "100%" },
   };
 
   const { t } = useTranslation();
@@ -72,6 +72,7 @@ export function DetailsLayer({ details }) {
     <motion.div
       initial={variant.offscreen}
       whileInView={variant.onscreen}
+      transition={{ delay: 1 }}
       className="details-layer absolute top-0 z-20 w-1/2 bg-base-300 h-full flex flex-col md:flex-row justify-evenly items-center"
       style={{
         left: t("dir") === "rtl" ? "0px" : "",

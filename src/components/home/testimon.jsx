@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 export function Testimonial({ data, readMore }) {
   const { t } = useTranslation();
   return (
-    <section className="bg-base-100 mb-10 mt-8">
+    <section className="bg-base-100 mb-10 mt-8 overflow-x-hidden">
       <div className="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
         <h2 className="text-center text-xl font-bold tracking-tight ">
           {t("Read trusted reviews from our customers")}

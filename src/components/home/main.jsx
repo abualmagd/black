@@ -4,9 +4,9 @@ import { useTranslation } from "react-i18next";
 export function NewHomeMain() {
   const { t } = useTranslation();
   return (
-    <div className="my-home-main flex flex-col">
+    <div className="my-home-main flex flex-col z-0">
       <div className="hero relative h-[70vh] w-full">
-        <div className="absolute w-screen overflow-x-hidden h-[700px] z-1 md:opacity-5 opacity-10 hero-bg"></div>
+        <div className="absolute w-screen overflow-x-hidden h-[700px] z-0 md:opacity-5 opacity-10 hero-bg"></div>
         <div className="swim-animation ">
           <video src="/assets/rkt.webm" autoPlay muted className="h-32 w-32" />
         </div>

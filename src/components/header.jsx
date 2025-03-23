@@ -9,6 +9,9 @@ import { useLocation } from "react-router";
 export function MyHeader() {
   const { i18n } = useTranslation();
   const [isOpen, setOpen] = useState(false);
+
+  const [currentLang] = useState(() => i18n.language.split("-")[0]);
+
   const projectsLink =
     useLocation().pathname === "/" ? "#projects" : "projects";
   const { t } = useTranslation();
@@ -66,7 +69,7 @@ export function MyHeader() {
             onClick={() => setOpen(!isOpen)}
             className=" cursor-pointer h-7 w-6 rounded mx-1 border-2 border-base-content/20 text-center"
           >
-            {i18n.language == "en" ? "en" : "عر"}
+            {currentLang === "en" ? "en" : "عر"}
           </div>
           {isOpen && (
             <motion.ul
@@ -77,9 +80,9 @@ export function MyHeader() {
               <li className="cursor-pointer">
                 <button
                   id="k"
-                  disabled={i18n.language == "en"}
+                  disabled={currentLang === "en"}
                   style={{
-                    color: i18n.language == "ar" ? "#FFB822" : "GrayText",
+                    color: currentLang === "ar" ? "#FFB822" : "GrayText",
                   }}
                   onClick={(e) => changeMyLanguage(e, "en")}
                 >
@@ -89,9 +92,9 @@ export function MyHeader() {
               <li className=" cursor-pointer">
                 <button
                   id="k"
-                  disabled={i18n.language == "ar"}
+                  disabled={currentLang === "ar"}
                   style={{
-                    color: i18n.language == "en" ? "#FFB822" : "GrayText",
+                    color: currentLang === "en" ? "#FFB822" : "GrayText",
                   }}
                   onClick={(e) => changeMyLanguage(e, "ar")}
                 >

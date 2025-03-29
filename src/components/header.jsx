@@ -10,7 +10,9 @@ export function MyHeader() {
   const { i18n } = useTranslation();
   const [isOpen, setOpen] = useState(false);
 
-  const [currentLang] = useState(() => i18n.language.split("-")[0]);
+  const [currentLang, setCurrentLang] = useState(
+    () => i18n.language.split("-")[0]
+  );
 
   const projectsLink =
     useLocation().pathname === "/" ? "#projects" : "projects";
@@ -25,6 +27,7 @@ export function MyHeader() {
   const changeMyLanguage = (e, lang) => {
     e.stopPropagation();
     i18n.changeLanguage(lang);
+    setCurrentLang(lang);
     setOpen(false);
   };
 

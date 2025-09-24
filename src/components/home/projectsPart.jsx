@@ -53,13 +53,15 @@ export function ProjrectCard({ project }) {
           {t(String(project.description))}
         </p>
         <div className="card-actions justify-end">
-          <a
-            href={project.link}
-            target="_blank"
-            className="btn btn-primary bg-slate-100"
-          >
-            {t("live preview")}
-          </a>
+          {project.link && (
+            <a
+              href={project.link}
+              target="_blank"
+              className="btn btn-primary bg-slate-100"
+            >
+              {t("live preview")}
+            </a>
+          )}
         </div>
       </div>
     </div>

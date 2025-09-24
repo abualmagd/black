@@ -46,13 +46,15 @@ export function ProjectBigCard({ project }) {
           <h1 className=" text-4xl font-extrabold">{t(project.name)}</h1>
           <p className=" text-lg line-clamp-3">{t(project.description)}</p>
           <div className="card-actions justify-end">
-            <a
-              href={project.link}
-              target="_blank"
-              className="btn btn-primary bg-slate-100"
-            >
-              {t("live preview")}
-            </a>
+            {project.link && (
+              <a
+                href={project.link}
+                target="_blank"
+                className="btn btn-primary bg-slate-100"
+              >
+                {t("live preview")}
+              </a>
+            )}
           </div>
         </div>
       </div>

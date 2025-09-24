@@ -69,7 +69,7 @@
   "Expressjs": "إكسبريس جي إس",
   "scratch": "سكراتش",
   "Laravel": "لارافيل",
-  "Postegres": "بوستجري إس كيو إل",
+  "Postegres": "بوستجرس إس كيو إل",
   "Cms": "نظم إدارة المحتوى",
   "Supabase": "سوبابيس",
   "Firebase": "فايربيس",
@@ -81,5 +81,17 @@
   "Laravel cloud": "لارفل كلود",
   "Netlify": "نيتلفاى",
   "Vercel": "فرسل",
-  "Ai Api": "ذكاء اصطناعي Api"
+  "Ai Api": "ذكاء اصطناعي Api",
+  "Vanillajs": "فانيلا جافاسكربت",
+  "Cloudflare": "كلود فلار",
+  "Do in Cornwall": "دو كورنوال",
+  "Tourist guide website, for explore activities in Cornwall": "موقع سياحي ولأكتشاف المواقع السياحية بكورنوال المملكة المتحدة",
+  "MySchoolz": "مدارسنا",
+  "Desktop app to manage schools of geographical sectors": "تطبيق دسك توب للماك وللويندوز للتحكم والبحث عن المدارس في منطقة جغرافية محددة ومدعم بخريطة تفاعلية",
+  "Electronjs": "الكترون",
+  "Sqlite3": "سكول لايت",
+  "Reactjs": "ريأكت",
+  "React-Leaflet": "ريأكت ليفلت",
+  "Local": "ديسك توب",
+  "Fastifyjs": "فاستفاي"
 }

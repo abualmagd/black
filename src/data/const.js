@@ -21,13 +21,17 @@ export const mySkills = [
   "Next",
   "React",
   "Tailwind",
+  "Fastifyjs",
   "Expressjs",
-  "scratch",
-  "Laravel",
   "Postegres",
   "Cms",
   "Supabase",
   "Firebase",
+  "Electronjs",
+  "Sqlite3",
+  "scratch",
+  "Cloudflare",
+  "Laravel",
 ];
 
 export const whatsappLnk = `https://wa.me/${myNumber}?text=${encodeURIComponent(
@@ -44,6 +48,26 @@ export const myProjects = [
     details: {
       tech: ["Next", "Tailwind", "Supabase", "Ai Api"],
       hosting: "Netlify",
+    },
+  },
+  {
+    name: "Do in Cornwall",
+    description: "Tourist guide website, for explore activities in Cornwall",
+    link: "https://doincornwall.com",
+    image: "/assets/cornwall.avif",
+    details: {
+      tech: ["Vanillajs", "Tailwind"],
+      hosting: "Cloudflare",
+    },
+  },
+  {
+    name: "MySchoolz",
+    description: "Desktop app to manage schools of geographical sectors",
+    link: null,
+    image: "/assets/schoolsu.png",
+    details: {
+      tech: ["Reactjs", "Electronjs", "React-Leaflet", "Sqlite3", "Tailwind"],
+      hosting: "Local",
     },
   },
   {
@@ -94,5 +118,12 @@ export const miniTestMonialdata = [
       "What I like best about Ismail is his commitment to understanding and meeting the unique needs of their clients. ",
     url: "",
     platform: "crowdreviews",
+  },
+  {
+    name: "Mona Ibr",
+    image: "/assets/mn.png",
+    content: "البرنامج ممتاز جدا وأفضل مما توقعت ",
+    url: "",
+    platform: "whatsapp",
   },
 ];

@@ -49,7 +49,7 @@ export function ProjrectCard({ project }) {
         <h2 className="card-title text-white px-4 py-2 rounded ">
           {t(project.name)}
         </h2>
-        <p className=" line-clamp-2 overflow-hidden text-white px-4 py-1 rounded">
+        <p className="  h-28 overflow-hidden text-white px-4 py-1 rounded">
           {t(String(project.description))}
         </p>
         <div className="card-actions justify-end">

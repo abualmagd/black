@@ -16,7 +16,7 @@ export function Testimonial({ data, readMore }) {
           )}
         </h3>
 
-        <div className="  mt-8 grid md:grid-cols-3 gap-1 grid-cols-1  justify-center w-full  ">
+        <div className="  mt-8 flex flex-wrap gap-2  justify-center w-full  ">
           {data.map((t, index) => {
             return <Tesmini object={t} key={index} />;
           })}
@@ -39,7 +39,7 @@ export function Testimonial({ data, readMore }) {
 // eslint-disable-next-line react/prop-types
 export function Tesmini({ object }) {
   return (
-    <blockquote className="rounded-lg bg-base-300 p-6 shadow-sm sm:p-8 m-2">
+    <blockquote className="w-80 rounded-lg bg-base-300 p-6 shadow-sm sm:p-8 m-2">
       <div className="flex items-center gap-4">
         <img
           alt="object.content"
